@@ -1,0 +1,881 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+}
+.header {
+  grid-area: 1/1/1/13;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+.carosel-singl {
+  grid-area: 2/1/2/13;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.carosel-v {
+  grid-area: 2/1/2/13;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.container {
+  grid-area: 3/4/6/13;
+  visibility: visible;
+}
+.sid-nav {
+  grid-area: 3/1/3/4;
+  display: flex;
+  flex-flow: column wrap;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  visibility: visible;
+}
+.extra-h {
+  grid-area: 4/1/7/13;
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  text-align: center;
+  border: 1px solid beige;
+  margin-top: 30px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+footer {
+  grid-area: 8/1/13/13;
+  background-color: cornsilk;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  justify-content: stretch;
+  vertical-align: middle;
+}
+li u {
+  text-decoration: none;
+  display: none;
+  content: inherit;
+  text-align: left;
+  padding: 3px 5px;
+  margin: 1px 1px;
+  border-radius: 5px;
+  visibility: hidden;
+  position: relative;
+}
+li u:hover {
+  color: yellowgreen;
+}
+.sid-nav ul li:hover u {
+  background-color: white;
+  display: list-item;
+  visibility: visible;
+}
+li span a {
+  color: #333;
+  text-decoration: none;
+}
+.list-f {
+  order: 2;
+  flex: 1 1 auto;
+  position: relative;
+  display: inline;
+  justify-content: center;
+  align-self: center;
+}
+.list-f ul {
+  float: left;
+  order: 1;
+  flex: 1 1 auto;
+  position: relative;
+  text-align: left;
+  list-style: none;
+  margin: 2px 15px;
+}
+.list-f ul li {
+  font-size: 12px;
+  text-align: left;
+  padding: 5px;
+  margin: 2px;
+  justify-content: stretch;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  text-align: left;
+  cursor: pointer;
+}
+.list-f ul li:first-child {
+  font-size: 18px;
+  color: yellowgreen;
+  padding: 20px 10px;
+  align-self: center;
+  cursor: auto;
+}
+li input:first-child {
+  background-color: violet;
+  border: none;
+  width: 350px;
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: left;
+}
+li input:nth-child(2) {
+  background-color: violet;
+  font-size: 20px;
+  text-align: center;
+  padding: 6px 6px;
+  margin-top: 1px;
+}
+
+.extra-n,
+.extra-n2 {
+  display: inline;
+  flex-flow: column wrap;
+  flex: 1 1 auto;
+  list-style: none;
+  background-color: rgb(6, 19, 11);
+  margin: 10px 10px;
+}
+.extra-n {
+  order: 1;
+}
+.extra-n2 {
+  order: 2;
+}
+.extra-n li,
+.extra-n2 li {
+  order: 1;
+  flex: 1 1 auto;
+  text-align: center;
+  float: left;
+  margin: 0px 0px;
+  padding: 10px 40px;
+  font-weight: lighter;
+  color: bisque;
+  cursor: pointer;
+}
+.extra-n li:hover,
+.extra-n2 li:hover {
+  background-color: yellowgreen;
+  color: rgb(38, 58, 3);
+}
+.recomand {
+  grid-area: 1/1/3/13;
+  border: 1px solid beige;
+  margin-top: 43px;
+  border-radius: 5px;
+}
+.recomand-h {
+  order: 1;
+  flex: 1 1 auto;
+  color: yellowgreen;
+  align-self: center;
+  align-content: center;
+}
+.recomand-h h1 {
+  color: yellowgreen;
+  font-size: 20px;
+  position: relative;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  top: -18px;
+}
+.card-symple,
+.card-symple2 {
+  flex: 1 1 auto;
+  position: relative;
+  display: inline;
+}
+.card-symple {
+  order: 2;
+}
+.next{
+  display: inline;
+}
+.next p{
+  cursor: pointer;
+  color: black;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin: 5px;
+  padding: 5px;
+  width: 150px;
+  border: 1px solid yellowgreen;
+}
+.card-symple2 {
+  order: 4;
+}
+.card {
+  display: block;
+  flex: 1 1 auto;
+  float: left;
+  width: 230px;
+  overflow: hidden;
+  margin: 10px;
+  border: 1px solid beige;
+  box-sizing: content-box;
+  order: 1;
+  flex-direction: 1 1 auto;
+  border-radius: 5px;
+}
+.card img {
+  order: 1;
+  flex: 1 1 auto;
+  image-rendering: auto;
+  width: 225px;
+  height: 250px;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  border: 1px solid beige;
+  padding: 2px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card ul {
+  order: 2;
+  flex: 1 1 auto;
+  display: inherit;
+  list-style: none;
+}
+.card ul li {
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  color: rgb(75, 71, 71);
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card ul li input {
+   width: 40px;
+   height: 14px;
+   background-color: white;
+   border: 1px solid yellowgreen;
+   margin: 5px;
+}
+.card ul li:first-child {
+  position: relative;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  color: orange;
+  font-weight: bolder;
+}
+.btn-group {
+  order: 3;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 10px;
+}
+.btn-group p {
+  order: 1;
+  flex: 1 1 auto;
+  display: inline;
+  position: relative;
+  text-align: center;
+  border: 1px solid yellow;
+  margin: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 4px;
+  cursor: pointer;
+}
+.btn-group a {
+  order: 2;
+  flex: 1 1 50px;
+  display: inline;
+  position: relative;
+  text-align: center;
+  border: 1px solid yellow;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-group p span {
+  margin: 2px;
+}
+.other {
+  order: 4;
+  flex: 1 1 auto;
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  float: left;
+}
+.other p {
+  order: 1;
+  flex: 1 1 auto;
+  padding: 2px;
+  border: 1px solid beige;
+  cursor: pointer;
+  text-align: center;
+}
+.other p span {
+  padding: 2px;
+}
+.category {
+  order: 1;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+.category h1 {
+  padding: 5px;
+  font-size: 20px;
+  color: yellowgreen;
+  z-index: 3;
+  top: 18px;
+  position: relative;
+  align-content: center;
+  align-self: center;
+  background-color: white;
+}
+.category ul {
+  text-align: center;
+  margin: 5px;
+  border-top: 1px solid blanchedalmond;
+  border-bottom: 1px solid blanchedalmond;
+  border-left: 1px solid blanchedalmond;
+  border-right: 1px solid blanchedalmond;
+  margin-top: 0px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-radius: 5px;
+}
+.category ul li {
+  order: 1;
+  flex: 1 1 auto;
+  cursor: pointer;
+  list-style: none;
+  padding-left: 5px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.category ul li span {
+  font-size: 18px;
+  font-weight: bolder;
+  float: right;
+
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.brand {
+  order: 1;
+  flex: 1 1 auto;
+  padding-top: 50px;
+}
+.category ul li,
+.brand ul li {
+  text-align: left;
+}
+.set {
+  display: flex;
+  flex-flow: row wrap;
+  height: 450px;
+}
+.image {
+  order: 2;
+  flex: 1 1 auto;
+  align-items: center;
+  align-self: center;
+}
+.image img {
+  width: 500px;
+  height: 300px;
+  border: 1px solid bisque;
+}
+.form {
+  order: 2;
+  flex: 1 1 auto;
+  background-color: rgb(21, 21, 26);
+  display: initial;
+  align-items: center;
+  align-self: center;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+.size {
+  display: inline;
+  padding: 10px 10px;
+  background-color: rgb(21, 21, 26);
+  border: none;
+  font-size: 20px;
+  margin: 0px 0px;
+}
+.form input {
+  text-align: left;
+  width: 300px;
+  color: yellowgreen;
+}
+.form p {
+  text-align: center;
+  color: yellowgreen;
+  border: yellow;
+  cursor: pointer;
+}
+.para {
+  order: 1;
+  flex: 1 1 auto;
+  text-align: center;
+  align-self: center;
+  display: inline;
+  padding-bottom: 20px;
+}
+.para h1 {
+  color: orangered;
+  padding: 10px;
+  font-size: 70px;
+  font-weight: bold;
+}
+.para h1::first-letter {
+  color: rgb(65, 129, 5);
+}
+.para p {
+  padding: 5px;
+  font-size: 20px;
+  color: coral;
+  margin: 5px;
+}
+
+#drop {
+  display: none;
+  background-color: rgb(20, 18, 24);
+  color: white;
+  margin-top: 10px;
+}
+.upper {
+  order: 1;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: rgb(241, 248, 247);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+}
+.upper .info {
+  order: 1;
+  flex: 1 1 auto;
+  display: inline;
+  flex-flow: row wrap;
+  font-weight: lighter;
+  font-size: 12px;
+  margin: 5px;
+  padding: 5px;
+}
+.upper .socil {
+  order: 2;
+  display: inline;
+  flex: 1 1 auto;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+}
+.info li span {
+  padding: 2px;
+  border: 2px;
+  margin: 2px;
+}
+.info li {
+  list-style: none;
+  display: inline;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.socil li {
+  border-top: 15px;
+  list-style: none;
+  display: inline;
+  cursor: pointer;
+}
+.facebook,
+.twiter {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 50px;
+  background-color: rgb(227, 253, 252);
+  color: rgb(56, 47, 47);
+}
+.ln {
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 50px;
+  background-color: rgb(227, 253, 252);
+  color: rgb(56, 47, 47);
+}
+.facebook:hover,
+.twiter:hover,
+.ln:hover {
+  background-color: blue;
+  color: wheat;
+}
+.main-head {
+  order: 1;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+.nav-brand {
+  order: 1;
+  flex: 1 1 auto;
+  display: inline;
+  padding-top: 10px;
+}
+.nav-brand h1 {
+  color: rgb(21, 41, 5);
+  cursor: pointer;
+  margin-left: 10px;
+}
+.nav-info {
+  order: 2;
+  flex: 1 1 auto;
+  display: inline;
+  padding-top: 10px;
+}
+.nav-info ul {
+  display: inline;
+  list-style: none;
+}
+.nav-info ul li {
+  float: left;
+  padding-top: 5px;
+  text-align: justify;
+  justify-content: right;
+  cursor: pointer;
+  font-size: 15px;
+}
+.nav-info ul li span {
+  padding: 2px;
+  color: black;
+}
+.nav-info ul li span:hover {
+  color: blue;
+}
+.nav-info ul span {
+  padding-left: 2px;
+}
+.search {
+  order: 3;
+  flex: 1 1 auto;
+  display: inline;
+  text-align: center;
+}
+.search input {
+  margin: 0px;
+  padding: 0px;
+  vertical-align: inherit;
+}
+.search .search-click {
+  border-left: 0px;
+}
+.search .search-box {
+  border-right: opx;
+}
+.border {
+  order: 5;
+  flex: 1 1 auto;
+  position: relative;
+  width: 100%;
+  background-color: blanchedalmond;
+  height: 1px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.cart {
+  margin: 3px;
+  padding: 3px;
+  font-size: 10px;
+}
+.log,
+.wish,
+.product,
+.search {
+  margin: 5px;
+  padding: 5px;
+  font-size: 10px;
+}
+.search {
+  display: flex;
+  flex-flow: row wrap;
+}
+.search input[type="submit"],
+input[type="reset"] {
+  order: 2;
+  flex: none;
+  background-color: rgb(230, 230, 208);
+  border: none;
+  color: rgb(31, 23, 23);
+  padding: 10px 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.search p {
+  background-color: #d5d5eb;
+  border: none;
+  color: rgb(20, 13, 13);
+  padding: 10px 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.search input[type="search"] {
+  background-color: rgb(230, 230, 208);
+  border: none;
+  color: rgb(73, 13, 13);
+  padding: 10px 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  text-align: start;
+}
+.drop-down {
+  order: 3;
+  flex: 1 1 auto;
+  float: left;
+  align-self: center;
+  padding-bottom: 10px;
+}
+.drop-menu {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  align-self: start;
+  padding: 15px;
+  vertical-align: top;
+  top: 10px;
+}
+.drop-menu span {
+  color: yellowgreen;
+}
+.drop-menu ul {
+  position: relative;
+  display: list-item;
+  list-style: none;
+  text-align: left;
+  font-size: 15px;
+}
+.drop-menu ul li {
+  text-align: left;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    grid-area: 4/1/6/13;
+    border: 1px solid beige;
+    visibility: visible;
+  }
+  .sid-nav {
+    grid-area: 3/1/4/13;
+    display: none;
+    flex-flow: column wrap;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    visibility: hidden;
+  }
+  .extra-h {
+    grid-area: 7/1/7/13;
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    text-align: center;
+    border: 1px solid beige;
+    margin-top: 30px;
+    border-radius: 5px;
+  }
+  .card-symple,
+  .card-symple2 {
+    flex: 1 1 auto;
+    position: relative;
+    display: flex;
+  }
+  .card-symple {
+    order: 2;
+  }
+  .card-symple2 {
+    order: 4;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #333;
+  }
+  .upper {
+    order: 1;
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgb(241, 248, 247);
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .upper .info,
+  .product {
+    order: 1;
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: lighter;
+    font-size: 10px;
+    margin: 2px;
+    padding: 2px;
+  }
+  .set {
+    display: flex;
+    flex-flow: column wrap;
+    height: 400px;
+  }
+  .set .image {
+    order: 1;
+    flex: 1 1 auto;
+    align-items: center;
+    align-self: center;
+  }
+  .set .image img {
+    width: 300px;
+    height: 220px;
+    border: 1px solid bisque;
+  }
+  .set .para {
+    order: 2;
+    flex: 1 1 auto;
+    text-align: center;
+    align-self: start;
+    display: inline;
+  }
+  .para h1 {
+    color: orangered;
+    padding: 5px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .para h1::first-letter {
+    color: rgb(65, 129, 5);
+  }
+  .para p {
+    padding: 5px;
+    font-size: 15px;
+    color: coral;
+    margin: 5px;
+  }
+  .extra-n,
+  .extra-n2 {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    list-style: none;
+    background-color: rgb(6, 19, 11);
+    margin: 10px 10px;
+  }
+  .extra-n {
+    order: 1;
+  }
+  .extra-n2 {
+    order: 2;
+  }
+  .extra-n li,
+  .extra-n2 li {
+    order: 1;
+    flex: 1 1 auto;
+    text-align: center;
+    float: left;
+    margin: 0px 0px;
+    padding: 10px 40px;
+    font-weight: lighter;
+    color: bisque;
+    cursor: pointer;
+  }
+  .form {
+    order: 2;
+    flex: 1 1 auto;
+    background-color: wheat;
+    display: initial;
+    align-items: center;
+    align-self: center;
+    padding: 50px 20px;
+    border-radius: 5px;
+    color: yellowgreen;
+  }
+  .size {
+    display: inline;
+    padding: 5px 5px;
+    background-color: white;
+    border: 1px solid yellow;
+    font-size: 20px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    color: yellowgreen;
+  }
+  .size option{
+    color: yellowgreen;
+    background-color: wheat;
+  }
+  .cls {
+    color: yellowgreen;
+    background-color: wheat;
+  }
+  .form input {
+    text-align: left;
+    width: 300px;
+    color: yellowgreen;
+  }
+  .form .size option{
+    color: yellowgreen;
+    background-color: wheat;
+  }
+  .form p {
+    text-align: center;
+    color: yellowgreen;
+    border: yellow;
+    cursor: pointer;
+  }
+  .block {
+    visibility: hidden;
+  }
+}
+.none {
+  display: none;
+  visibility: hidden;
+}
+.block {
+  visibility: visible;
+}
+a {
+  font-style: normal;
+  text-decoration: none;
+}
