@@ -1,0 +1,240 @@
+body {
+    font-family: Helvetica Neue, Arial, sans;
+    margin-top: 2em;
+    background: #FAFAFA;
+}
+
+.wrapper {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: min-content;
+    grid-auto-columns: auto;
+    grid-auto-rows: min-content;
+    grid-auto-flow: row dense;
+    grid-gap: 0px;
+    margin: 0;
+}
+.drift-demo-trigger {
+    width: 70%;
+    float: left;
+    grid-area: 1/1/6/6;
+    justify-self: right;
+    border: 1px solid yellow;
+}
+.media{
+    grid-area: 6/1/7/6;
+    position: relative;
+    text-align: center;
+}
+.bages{
+    grid-area: 7/1/7/6;
+    padding: 10px 0px 0px 10px;
+    position: relative;
+}
+.detail {
+    grid-area: 1/7/13/13;
+    position: relative;
+    margin-left: 5%;
+    float: left;
+    justify-self: left;
+}
+.img{
+    display: inline-block;
+    position: relative;
+}
+.img img{
+    width: 600px;
+    height: auto;
+    padding: 3px;
+}
+.all-img{
+    position: relative;
+}
+.all-img img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 1px 1px 1px 1px;
+    margin: 5px 0px 5px 0px;
+    border: 1px solid yellowgreen;
+}
+.pan{
+    margin: 0px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    z-index: 999;
+    display: block;
+}
+h1 {
+    color: #013C4A;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+p {
+    max-width: 32em;
+    margin-bottom: 1em;
+    color: #23637f;
+    line-height: 1.6em;
+}
+p:last-of-type {
+    margin-bottom: 2em;
+}
+a {
+    color: #00C0FA;
+}
+.ix-link {
+    display: block;
+    margin-bottom: 3em;
+}
+.btn-group{
+    justify-self: center;
+    position: relative;
+}
+.btn-group ul{
+    display: inline;
+    position: relative;
+    text-align: center;
+    justify-self: center;
+}
+.btn-group ul li{
+    display: inline;
+    list-style: none;
+    border: 1px solid rgb(3, 3, 5);
+    margin: 2px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+.btn-group ul li:hover{
+    background-color: rgb(3, 3, 5);
+    color: rgb(191, 219, 195);
+}
+.detail ul li{
+    list-style: square;
+}
+.log {
+    grid-area: 9/1/10/13;
+}
+.log ul {
+    display: inline;
+    position: relative;
+}
+.log ul li{
+    list-style: none;
+    display: block;
+}
+.tav {
+    float: left;
+}
+.tav ul{
+    float: left;
+}
+.tav ul li{
+    position: relative;
+    text-align: center;
+    list-style: none;
+    display: inline;
+}
+.facebook,
+.twiter {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 50px;
+  background-color: rgb(227, 253, 252);
+  color: rgb(56, 47, 47);
+}
+.ln {
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 50px;
+  background-color: rgb(227, 253, 252);
+  color: rgb(56, 47, 47);
+}
+@media (max-width: 900px) {
+    .wrapper {
+        text-align: center;
+        width: auto;
+    }
+
+    .detail,
+    .drift-demo-trigger {
+        float: none;
+    }
+
+    .drift-demo-trigger {
+        grid-area: 1/1/4/13;
+        max-width: 100%;
+        width: auto;
+        margin: 0 auto;
+    }
+    .media{
+        grid-area: 5/1/5/13;
+        position: relative;
+        text-align: center;
+    }
+    .bages{
+        grid-area: 7/1/8/13;
+    }
+    .log {
+        grid-area: 9/1/9/13;
+    }
+    .detail {
+        grid-area: 10/1/13/13;
+        margin: 0;
+        width: auto;
+    }
+    .pan{
+        margin: 0px;
+        width: 400px;
+        height: 400px;
+        position: fixed;
+        display: none;
+    }
+    p {
+        margin: 0 auto 1em;
+    }
+
+    .responsive-hint {
+        display: none;
+    }
+
+    .drift-bounding-box {
+        display: none;
+    }
+    .all-img{
+        position: relative;
+    }
+    .all-img img{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+    }
+    .btn-group ul{
+        position: relative;
+        text-align: center;
+        justify-self: center;
+    }
+    .btn-group ul li{
+        display: list-item;
+        list-style: none;
+        border: 1px solid rgb(3, 3, 5);
+        margin: 2px;
+        padding: 5px 10px 5px 10px;
+        cursor: pointer;
+    }
+.detail ul li{
+        list-style: none;
+        text-align: left;
+    }
+.log ul li{
+    list-style: none;
+    display: inline;
+}
+}

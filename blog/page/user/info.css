@@ -1,0 +1,170 @@
+.wall {
+  grid-area: 1/1/1/13;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(17, 16, 14);
+  color: rgb(207, 48, 48);
+  display: flex;
+  flex-flow: row wrap;
+}
+.img {
+  display: flow-root;
+  position: initial;
+  width: 150px;
+  height: 170px;
+  margin: 120px 0px;
+  order: 1;
+  flex: 1 1 150px;
+}
+.img img {
+  width: 150px;
+  height: 170px;
+  position: relative;
+  border: 3px solid rgb(238, 217, 217);
+}
+.name {
+  flex: 1 2 auto;
+  order: 2;
+  position: relative;
+  display: block;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+.name ul {
+  text-align: end;
+}
+.name ul li {
+  text-transform: uppercase;
+  list-style: none;
+}
+/*- sid nave --- */
+.aside {
+  display: flex;
+  flex-flow: row wrap;
+  grid-area: 2/1/6/3;
+  background-color: rgb(25, 31, 22);
+  color: white;
+  border-top-right-radius: 5px;
+  padding-top: 1px;
+  margin-top: 0px;
+  border-top: 1px solid rgb(223, 132, 14);
+  margin-right: 2px;
+  padding-bottom: 40px;
+  height: auto;
+}
+.main-side {
+  display: flex;
+  flex-flow: column wrap;
+  order: 1;
+  position: relative;
+}
+.list {
+  text-align: left;
+  justify-content: flex-start;
+  font-size: 15px;
+  cursor: pointer;
+}
+.list span {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: 35px;
+}
+.list li {
+  text-align: left;
+  font-size: 12px;
+  padding-left: 5px;
+}
+.list li span,
+.list li a span {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: 35px;
+}
+.list li .list-name {
+  font-size: 12px;
+}
+
+.list li a {
+  color: white;
+  overflow: hidden;
+}
+.point {
+  font-size: 15px;
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*----------------side ----------*/
+.flex-col {
+  grid-area: 2/3/6/13;
+}
+.sm-card {
+  order: 1;
+  flex: 1 1 auto;
+}
+.s-card {
+  padding-top: 10px;
+  width: 100%;
+}
+.s-value {
+  display: block;
+  position: relative;
+  float: left;
+  text-decoration: none;
+  border: 1px solid yellowgreen;
+  margin: 5px 5px;
+  padding: 20px 40px;
+  background-color: wheat;
+}
+.list-info {
+  order: 2;
+  flex: 1 1 auto;
+  padding: 100px 10px;
+}
+.list-info ul {
+  text-align: left;
+  padding-left: 20px;
+}
+.list-info ul li {
+  text-align: left;
+  list-style: square;
+  list-style-type: square;
+}
+.action {
+  order: 3;
+  flex: 1 1 auto;
+  display: inline;
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  padding-left: 10px;
+}
+.action ul {
+  display: inline;
+  text-align: center;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  justify-self: center;
+  justify-content: center;
+}
+.action ul li {
+  float: left;
+  text-align: center;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  border: 1px solid yellowgreen;
+  color: navy;
+  list-style: none;
+}
+.action ul li a {
+  text-decoration: none;
+  color: navy;
+}
