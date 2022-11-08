@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: scroll;
+}
+.form {
+  grid-area: 1/1/13/13;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column wrap;
+  padding-top: 300px;
+  padding-bottom: 200px;
+}
+.form-group {
+  display: flex;
+  order: 1;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+  margin: 5px;
+  padding: 5px;
+}
+label {
+  width: 200px;
+  text-align: right;
+  order: 1;
+  flex: 1 1 auto;
+}
+input {
+  order: 2;
+  flex: 1 1 auto;
+  width: 300px;
+  text-align: left;
+}
+textarea {
+  order: 2;
+  flex: 1 1 auto;
+  width: 300px;
+  text-align: left;
+  padding: 5px;
+}
+.form-group a {
+  text-decoration: none;
+  color: rgb(32, 5, 5);
+  margin: 5px;
+  padding: 5px;
+  align-content: center;
+  border: 1px solid rgb(41, 35, 94);
+  background-color: white;
+}
+.form-group a:hover {
+  background-color: rgb(96, 156, 56);
+  color: white;
+}
+.form-group p {
+  text-align: center;
+  color: rgb(224, 99, 10);
+  order: 3;
+  flex: 1 1 auto;
+}
+.form-group img {
+  order: 2;
+  width: 100px;
+  height: 92px;
+}
+.form-group select {
+  order: 2;
+  flex: 1 1 auto;
+}
+.form-list {
+  display: inline;
+  position: relative;
+  text-align: left;
+}
+.form-list ul li {
+  list-style: none;
+  text-align: left;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  label {
+    width: 200px;
+    text-align: left;
+    order: 1;
+    flex: 1 1 auto;
+  }
+  input {
+    order: 2;
+    flex: 1 1 auto;
+    width: 300px;
+    text-align: left;
+  }
+}
+.default {
+  display: none;
+}
+

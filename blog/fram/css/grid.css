@@ -1,0 +1,44 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+body {
+  text-align: center;
+}
+
+#grid,
+.grid,
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: min-content;
+  grid-auto-columns: auto;
+  grid-auto-rows: min-content;
+  grid-auto-flow: row dense;
+  grid-gap: 0px;
+}
+
+.flex,
+.flex-col,
+.flex-row {
+  display: flex;
+}
+.flex,
+.flex-row {
+  flex-flow: row wrap;
+}
+.flex-col {
+  flex-flow: column wrap;
+  grid-area: 2/3/13/13;
+}
+
+@media screen and (max-width: 700px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+}
