@@ -1,0 +1,573 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background-color: rgb(237, 245, 245);
+}
+
+#grid,
+.grid,
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-auto-columns: auto;
+  grid-auto-rows: min-content;
+  grid-auto-flow: row dense;
+  grid-gap: 0px;
+}
+
+.flex,
+.flex-col,
+.flex-row {
+  display: flex;
+}
+.flex,
+.flex-row {
+  flex-flow: row wrap;
+}
+.flex-col {
+  flex-flow: column wrap;
+  grid-area: 2/3/13/13;
+}
+
+ul {
+  content: inherit;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* ---- header ----*/
+header {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  grid-area: 1/1/1/13;
+  background-color: rgb(25, 31, 22);
+}
+.site-name {
+  flex: 1 1 auto;
+  order: 1;
+  text-align: center;
+}
+.name {
+  cursor: pointer;
+}
+.name h1 {
+  float: left;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+.nav {
+  order: 2;
+  display: inline;
+  flex: 1 1 auto;
+  text-align: center;
+  font: small-caption;
+  padding-top: 5px;
+  color: white;
+}
+.nav div {
+  float: right;
+  margin: 5px;
+  padding: 15px;
+  cursor: pointer;
+}
+.name div a {
+  color: white;
+}
+.togle {
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  order: 3;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+}
+div .log {
+  background-color: rgb(129, 129, 22);
+  border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: aqua;
+}
+div .log:hover {
+  background-color: rgba(133, 122, 25, 0.5);
+  color: white;
+}
+/*- sid nave --- */
+.aside {
+  display: flex;
+  flex-flow: row wrap;
+  grid-area: 2/1/13/3;
+  background-color: rgb(25, 31, 22);
+  color: white;
+  border-top-right-radius: 5px;
+  padding-top: 10px;
+  margin-top: 0px;
+  border-top: 1px solid rgb(223, 132, 14);
+  margin-right: 2px;
+  padding-bottom: 400px;
+  display: block;
+}
+.main-side {
+  display: flex;
+  flex-flow: column wrap;
+  order: 1;
+}
+.list {
+  text-align: left;
+  justify-content: flex-start;
+  font-size: 15px;
+  cursor: pointer;
+}
+.list span {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: 35px;
+}
+.list li {
+  text-align: left;
+  font-size: 12px;
+  padding-left: 5px;
+}
+.list li span,
+.list li a span {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  width: 35px;
+}
+.list li .list-name {
+  font-size: 12px;
+}
+
+.list li a {
+  color: white;
+  overflow: hidden;
+}
+.point {
+  font-size: 15px;
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*--- container -- */
+.s-card {
+  padding-top: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  order: 1;
+  flex: 1 1 auto;
+}
+.list-info {
+  order: 2;
+  flex: 1 1 auto;
+  align-content: flex-start;
+}
+.s-value {
+  flex: 1 1 170px;
+  background-color: rgb(102, 75, 136);
+  color: white;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.s-value a {
+  color: white;
+}
+.list-info ul {
+  order: 1;
+  flex-flow: row wrap;
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 40px;
+  margin-bottom: 10px;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+}
+.list-info ul li {
+  text-align: left;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.list-info ul li:first-child,
+.font-1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: blueviolet;
+}
+.s-table {
+  display: flex;
+  order: 2;
+  flex: 1 1 auto;
+  display: inline-block;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  padding: 100px 0px;
+}
+.paging {
+  display: inline;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  padding-bottom: 50px;
+}
+.paging ul {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  float: left;
+  text-align: center;
+}
+.paging ul li {
+  float: left;
+  text-align: center;
+  border: 1px solid yellowgreen;
+  margin: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+.paging ul li a {
+  color: green;
+}
+.s-table .form {
+  padding-bottom: 40px;
+  display: block;
+}
+.form-group {
+  display: block;
+  position: relative;
+  text-align: left;
+  padding: 2px 5px;
+}
+.form-group input {
+  position: static;
+}
+.form-group ul {
+  display: block;
+  width: 400px;
+  overflow: scroll;
+  background-color: white;
+  position: absolute;
+  visibility: hidden;
+}
+.form-group ul li {
+  display: block;
+  position: static;
+  text-align: center;
+  text-align: left;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  body {
+    background-color: rgb(237, 245, 245);
+  }
+  
+  #grid,
+  .grid,
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-auto-columns: auto;
+    grid-auto-rows: min-content;
+    grid-auto-flow: row dense;
+    grid-gap: 0px;
+  }
+  
+  .flex,
+  .flex-col,
+  .flex-row {
+    display: flex;
+  }
+  .flex,
+  .flex-row {
+    flex-flow: row wrap;
+  }
+  header {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    grid-area: 1/1/1/13;
+    background-color: rgb(25, 31, 22);
+    z-index: 999;
+  }
+  .aside {
+    display: flex;
+    flex-flow: row wrap;
+    grid-area: 3/1/4/13;
+    background-color: rgb(25, 31, 22);
+    color: white;
+    border-top-right-radius: 5px;
+    padding-top: 10px;
+    margin-top: 0px;
+    border-top: 1px solid rgb(223, 132, 14);
+    margin-right: 2px;
+    padding-bottom: 40px;
+    display: block;
+  }
+  .flex-col {
+    flex-flow: column wrap;
+    grid-area: 5/1/13/13;
+  }
+  
+  ul {
+    content: inherit;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  /* ---- header ----*/
+  .site-name {
+    flex: 1 1 auto;
+    order: 1;
+    text-align: center;
+  }
+  .name {
+    cursor: pointer;
+  }
+  .name h1 {
+    float: left;
+    padding: 15px;
+    color: white;
+    text-align: center;
+  }
+  
+  .nav {
+    order: 2;
+    display: inline;
+    flex: 1 1 auto;
+    text-align: center;
+    font: small-caption;
+    padding-top: 5px;
+    color: white;
+  }
+  .nav div {
+    float: right;
+    margin: 5px;
+    padding: 15px;
+    cursor: pointer;
+  }
+  .name div a {
+    color: white;
+  }
+  .togle {
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    order: 3;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+  }
+  div .log {
+    background-color: rgb(129, 129, 22);
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: aqua;
+  }
+  div .log:hover {
+    background-color: rgba(133, 122, 25, 0.5);
+    color: white;
+  }
+  /*- sid nave --- */
+  .main-side {
+    display: flex;
+    flex-flow: column wrap;
+    order: 1;
+  }
+  .list {
+    text-align: left;
+    justify-content: flex-start;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .list span {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    width: 35px;
+  }
+  .list li {
+    text-align: left;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+  .list li span,
+  .list li a span {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    width: 35px;
+  }
+  .list li .list-name {
+    font-size: 12px;
+  }
+  
+  .list li a {
+    color: white;
+    overflow: hidden;
+  }
+  .point {
+    font-size: 15px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /*--- container -- */
+  .s-card {
+    padding-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    order: 1;
+    flex: 1 1 auto;
+  }
+  .list-info {
+    order: 2;
+    flex: 1 1 auto;
+    align-content: flex-start;
+  }
+  .s-value {
+    flex: 1 1 170px;
+    background-color: rgb(102, 75, 136);
+    color: white;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .s-value a {
+    color: white;
+  }
+  .list-info ul {
+    order: 1;
+    flex-flow: row wrap;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 40px;
+    margin-bottom: 10px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+  }
+  .list-info ul li {
+    text-align: left;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .list-info ul li:first-child,
+  .font-1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: blueviolet;
+  }
+  .s-table {
+    display: flex;
+    order: 2;
+    flex: 1 1 auto;
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    padding: 100px 0px;
+  }
+  .paging {
+    display: inline;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    padding-bottom: 50px;
+  }
+  .paging ul {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    float: left;
+    text-align: center;
+  }
+  .paging ul li {
+    float: left;
+    text-align: center;
+    border: 1px solid yellowgreen;
+    margin: 5px;
+    padding: 2px 5px;
+    cursor: pointer;
+  }
+  .paging ul li a {
+    color: green;
+  }
+  .s-table .form {
+    padding-bottom: 40px;
+    display: block;
+  }
+  .form-group {
+    display: block;
+    position: relative;
+    text-align: left;
+    padding: 2px 5px;
+  }
+  .form-group input {
+    position: static;
+  }
+  .form-group ul {
+    display: block;
+    width: 400px;
+    overflow: scroll;
+    background-color: white;
+    position: absolute;
+    visibility: hidden;
+  }
+  .form-group ul li {
+    display: block;
+    position: static;
+    text-align: center;
+    text-align: left;
+    cursor: pointer;
+  }
+}
