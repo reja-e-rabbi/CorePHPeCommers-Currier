@@ -1,0 +1,174 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.hader{
+  grid-area: 1/1/1/13;
+  display: inline;
+  position: relative;
+  text-align: center;
+  background-color: rgb(13, 14, 12);
+}
+.hader h1{
+  color: rgb(107, 172, 23);
+  font-size: 60px;
+  padding: 5px;
+  cursor: pointer;
+}
+.pro-card{
+  grid-area: 2/1/13/9;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 5px 5px 5px 5px;
+  justify-self: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+.procard{
+  order: 1;
+  flex: 1 1 auto;
+  display: inline;
+  justify-self: center;
+  justify-content: center;
+}
+.card{
+  float: left;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 5px 0px 5px 0px;
+}
+.info{
+  order: 1;
+  flex: 1 1 auto;
+  display: inline;
+  padding: 10px;
+}
+.info img{
+  width: 300px;
+  height: 300px;
+  border: 1px solid yellowgreen;
+}
+.info ul{
+  display: inline;
+  position: relative;
+  text-align: left;
+  padding-left: 5px;
+  margin-left: 5px;
+  padding-bottom: 20px;
+}
+.info ul li{
+  list-style: none;
+  text-align: left;
+  padding: 5px 5px 5px 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: rgb(39, 71, 13);
+}
+.info .link{
+  padding-top: 10px;
+  margin: 10px;
+  display: inline;
+  justify-self: center;
+  justify-content: center;
+}
+.link a{
+  text-decoration: none;
+  border: 1px solid yellowgreen;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+.cus-info{
+  grid-area: 2/10/12/13;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+.cusinfo{
+  order: 1;
+  display: list-item;
+  list-style: none;
+  border: 1px solid yellowgreen;
+  margin: 5px;
+  padding: 5px;
+  background-color: wheat;
+  width: 300px;
+}
+.cust{
+  display: list-item;
+  list-style: none;
+  justify-self: start;
+  background-color: rgb(13, 14, 12);
+  color: yellowgreen;
+  position: relative;
+  padding: 5px 50px 5px 50px;
+  margin: 20px 20px 20px 20px;
+}
+.cust p{
+  color: yellowgreen;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-style: italic;
+}
+.cust-dt{
+  display: list-item;
+  position: relative;
+  text-align: center;
+}
+.cust-dt ul{
+  position: relative;
+}
+.cust-dt ul li{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  list-style: none;
+  text-align: left;
+}
+.btn-conf{
+  position: relative;
+}
+.btn-conf ul{
+  display: inline;
+}
+.btn-conf ul li{
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  float: left;
+  text-align: center;
+  border: 1px solid yellowgreen;
+  list-style: none;
+}
+.btn-conf ul li:hover{
+  background-color: rgb(6, 3, 15);
+  color: yellowgreen;
+}
+@media screen and (max-width : 700px){
+  .hader{
+    grid-area: 1/1/1/13;
+    display: inline;
+    position: relative;
+    text-align: center;
+    background-color: rgb(13, 14, 12);
+  }
+  .pro-card{
+    grid-area: 9/1/13/13;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5px 5px 5px 5px;
+    justify-self: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .cus-info{
+    grid-area: 2/1/8/13;
+    justify-content: center;
+    justify-items: center;
+    border: 1px solid yellowgreen;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0px 0px 20px 0px;
+  }
+}
+
